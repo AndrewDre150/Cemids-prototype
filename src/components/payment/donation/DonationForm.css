@@ -1,0 +1,56 @@
+/* Add these styles to your existing CSS or create a new CSS file */
+
+.donationbody {
+  background-image: url('./carbon-bg1.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.donation-card-container {
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.donation-card-container h1 {
+  text-align: center;
+  color: navy;
+  font-size: 2em;
+}
+
+.donation-card-container label {
+  font-size: 1.5em;
+  color: navy;
+  text-align: left;
+}
+
+.donation-card-container input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#alert {
+  color: green;
+  font-size: 2em;
+}
+
+/* Additional styling for responsiveness */
+
+.main-content {
+  width: 80%;
+  margin: auto;
+} 

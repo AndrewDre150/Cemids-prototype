@@ -1,0 +1,28 @@
+/* Chatbot.css */
+
+.chatbot-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .chatbot-l {
+    display: flex; /* Ensure its children are in a row */
+    align-items: center; /* Align children vertically */
+  }
+  
+  .chatbot-title {
+    color: var(--text-color-inverted);
+    margin: 0; /* Remove default margin */
+  }
+  
+  .chatbot-menu-btn {
+    color: var(--text-color-inverted);
+    cursor: pointer;
+  
+    @media (min-width: 769px) {
+      display: none; /* Hide the menu icon on larger screens */
+    }
+  }
+  

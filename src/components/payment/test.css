@@ -1,0 +1,48 @@
+  
+  .App-test{
+    text-align: center;
+  }
+  
+  .test-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+  
+  }
+  
+  .test-container input{
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .test-container button{
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background: teal;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .test-container button:hover{
+    background: #333;
+  }
+/* 
+.confirm {
+  display: flex;
+  align-items: center;
+} */

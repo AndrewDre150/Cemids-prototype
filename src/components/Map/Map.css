@@ -1,0 +1,51 @@
+
+  .map-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .map-l {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+  }
+  
+  .map-menu-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .map-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000; /* Adjust color as needed */
+  }
+  
+
+  /* Hide the sidebar on larger screens */
+@media screen and (min-width: 769px) {
+    .map-menu-btn {
+      display: none;
+    }
+  }
+  
+  /* Adjust the layout for small screens */
+  @media screen and (max-width: 768px) {
+    .map-header {
+      flex-direction: column; /* Change flex direction to column */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    .map-title {
+      margin-left: 10px; /* Add margin to separate title from menu button */
+    }
+  }
+  
