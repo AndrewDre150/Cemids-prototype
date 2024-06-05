@@ -14,6 +14,13 @@ import {
   MdOutlinePeople,
   MdOutlineSettings,
   MdOutlineShoppingBag,
+  MdOutlineBook,
+  MdOutlineReceipt,
+  MdOutlineMap,
+  MdOutlineQuiz,
+  MdOutlineCalendarToday,
+  MdOutlineNotifications,
+  MdOutlineAccountCircle,
 } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
@@ -88,15 +95,26 @@ const Sidebar = () => {
             <li className="menu-item">
               <Link to="/content" className="menu-link">
                 <span className="menu-link-icon">
-                  <MdOutlineAttachMoney size={20} />
+                  {/* <MdOutlineAttachMoney size={20} /> */}
+                  <MdOutlineBook size={20} />
                 </span>
                 <span className="menu-link-text">Educational Content</span>
               </Link>
             </li>
             <li className="menu-item">
+              <Link to="/report" className="menu-link">
+                <span className="menu-link-icon">
+                  {/* <MdOutlineAttachMoney size={20} /> */}
+                  <MdOutlineReceipt size={20} />
+                </span>
+                <span className="menu-link-text">Generate Report</span>
+              </Link>
+            </li>
+            <li className="menu-item">
               <Link to="/eventsmap" className="menu-link">
                 <span className="menu-link-icon">
-                  <MdOutlineAttachMoney size={20} />
+                  {/* <MdOutlineAttachMoney size={20} /> */}
+                  <MdOutlineMap size={20} />
                 </span>
                 <span className="menu-link-text">Events Map</span>
               </Link>
@@ -104,7 +122,8 @@ const Sidebar = () => {
             <li className="menu-item">
               <Link to="/quiz" className="menu-link">
                 <span className="menu-link-icon">
-                  <MdOutlineAttachMoney size={20} />
+                  {/* <MdOutlineAttachMoney size={20} /> */}
+                  <MdOutlineQuiz size={20} />
                 </span>
                 <span className="menu-link-text">Quiz</span>
               </Link>
@@ -120,23 +139,18 @@ const Sidebar = () => {
             <li className="menu-item">
               <Link to="/calender" className="menu-link">
                 <span className="menu-link-icon">
-                  <MdOutlineShoppingBag size={20} />
+                  {/* <MdOutlineShoppingBag size={20} /> */}
+                  <MdOutlineCalendarToday size={20} />
                 </span>
                 <span className="menu-link-text">Calender</span>
               </Link>
             </li>
-            {/* <li className="menu-item">
-              <Link to="/chatbot" className="menu-link">
-                <span className="menu-link-icon">
-                  <MdOutlinePeople size={20} />
-                </span>
-                <span className="menu-link-text">Chatbot</span>
-              </Link>
-            </li> */}
+           
               <li className="menu-item">
               <Link to="/chatbot" className="menu-link">
                 <span className="menu-link-icon">
                   <MdOutlinePeople size={20} />
+                  {/* <MdOutlineRobot size={20} /> */}
                 </span>
                 <span className="menu-link-text">Chatbot</span>
               </Link>
@@ -144,7 +158,8 @@ const Sidebar = () => {
             <li className="menu-item">
               <Link to="/alert" className="menu-link">
                 <span className="menu-link-icon">
-                  <MdOutlineMessage size={18} />
+                  {/* <MdOutlineMessage size={18} /> */}
+                  <MdOutlineNotifications size={18} />
                 </span>
                 <span className="menu-link-text">Notifications</span>
               </Link>
@@ -157,7 +172,8 @@ const Sidebar = () => {
             <li className="menu-item">
               <Link to="/profile" className="menu-link">
                 <span className="menu-link-icon">
-                  <MdOutlineSettings size={20} />
+                  {/* <MdOutlineSettings size={20} /> */}
+                  <MdOutlineAccountCircle size={20} />
                 </span>
                 <span className="menu-link-text">Profile</span>
               </Link>

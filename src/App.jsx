@@ -37,6 +37,7 @@ import CO2Monitor from "./components/Alerts/CO2Monitor";
 import Updates from "./components/Articles/Updates";
 import DashQuiz from "./components/Dashquiz/DashQuiz";
 import NewBot from './components/Chatbot/NewBot'
+import Report from "./components/Report/Report";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -106,6 +107,9 @@ function App() {
             </ProtectedRoute>} />
             <Route path="/content" element={<ProtectedRoute user={user}>
               <Updates/>
+            </ProtectedRoute>} />
+            <Route path="/report" element={<ProtectedRoute user={user}>
+              <Report/>
             </ProtectedRoute>} />
             <Route path="/calender" element={<ProtectedRoute user={user}>
               <Calender/>

@@ -7,7 +7,7 @@ const Dashboard = () => {
       <AreaCards />
       <AreaThinkspeak />
       <AreaCharts />
-      <AreaTable />
+      {/* <AreaTable /> */}
     </div>
   );
 };
