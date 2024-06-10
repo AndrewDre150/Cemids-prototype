@@ -380,11 +380,13 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import cemidslogo from '../../assets/images/cemids-logo.jpg';
 import './Report.css';
+import { SidebarContext } from "../../context/SidebarContext";
+import { MdOutlineMenu } from "react-icons/md";
 
 const Report = () => {
   const [reportData, setReportData] = useState(null);
@@ -532,16 +534,31 @@ const Report = () => {
     }
   };
 
+  const { openSidebar } = useContext(SidebarContext);
+
+
   return (
-    <section className="report-content">
-      <button onClick={loadReport} disabled={loading}>
-        {loading ? 'Loading...' : 'Generate Report'}
-      </button>
-      <div id="report-container"></div>
-      <button id="print-btn" disabled={!reportData} onClick={downloadReport}>
-        Download Report
-      </button>
-    </section>
+    <div>
+        <div className="chatbot-l">
+                <button
+                    className="chatbot-menu-btn"
+                    type="button"
+                    onClick={openSidebar}
+                >
+                    <MdOutlineMenu size={24} />
+                </button>
+                <h2 className="chatbot-title">Report</h2>
+            </div>
+      <section className="report-content">
+        <button onClick={loadReport} disabled={loading}>
+          {loading ? 'Loading...' : 'Generate Report'}
+        </button>
+        <div id="report-container"></div>
+        <button id="print-btn" disabled={!reportData} onClick={downloadReport}>
+          Download Report
+        </button>
+      </section>
+    </div>
   );
 };
 
