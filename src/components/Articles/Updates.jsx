@@ -245,7 +245,7 @@ const Updates = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/articles/')
+    fetch('https://web-production-1423.up.railway.app/api/articles/')
       .then(response => response.json())
       .then(data => setArticles(data))
       .catch(error => console.error('Error fetching articles:', error));
