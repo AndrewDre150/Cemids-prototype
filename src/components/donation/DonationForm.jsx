@@ -135,7 +135,7 @@ export default function DonationForm() {
 
     try {
       // Make a POST request to the backend to save the donation
-      const response = await axios.post('http://127.0.0.1:8000/apidonate/donation/donations/', donationData);
+      const response = await axios.post('https://web-production-1423.up.railway.app/apidonate/donation/donations/', donationData);
       console.log('Donation saved:', response.data);
 
       const config = {
