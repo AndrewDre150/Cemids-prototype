@@ -490,7 +490,7 @@ const Report = () => {
 
   const fetchReportData = async () => {
     try {
-      const response = await fetch('http://192.168.137.240:8000/data1/data1/report/');
+      const response = await fetch('http://192.168.43.59:8000/data1/data1/report/');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

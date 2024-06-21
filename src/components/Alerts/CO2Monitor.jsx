@@ -179,7 +179,7 @@ const CO2Monitor = () => {
   useEffect(() => {
     const fetchData = () => {
       // Fetch latest CO2 data from backend
-      axios.get('http://192.168.137.240:8000/data1/data1/latest/') // Replace with your actual API endpoint
+      axios.get('http://192.168.43.59:8000/data1/data1/latest/') // Replace with your actual API endpoint
       // Replace with your actual API endpoint
         .then(response => {
           setCO2Level(response.data.co2);
@@ -189,7 +189,7 @@ const CO2Monitor = () => {
         });
 
       // Fetch average CO2 level data from backend
-      axios.get('http://192.168.137.240:8000/data1/data1/average/') // Replace with your actual API endpoint
+      axios.get('http://192.168.43.59:8000/data1/data1/average/') // Replace with your actual API endpoint
       // Replace with your actual API endpoint
         .then(response => {
           setAverageCO2Level(response.data.average_co2);

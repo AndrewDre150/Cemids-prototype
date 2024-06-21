@@ -1,0 +1,8 @@
+/* News.css */
+
+.single-news .image img {
+    width: 100%;
+    height: 200px; /* or any desired height */
+    object-fit: cover; /* This will ensure the image covers the entire area while maintaining aspect ratio */
+  }
+  

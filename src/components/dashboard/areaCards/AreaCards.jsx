@@ -163,7 +163,7 @@ const AreaCards = () => {
   useEffect(() => {
     const fetchCurrentCO2 = async () => {
       try {
-        const response = await fetch("http://192.168.137.240:8000/data1/data1/latest/");
+        const response = await fetch("http://192.168.43.59:8000/data1/data1/latest/");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -176,7 +176,7 @@ const AreaCards = () => {
 
     const fetchAverageCO2 = async () => {
       try {
-        const response = await fetch("http://192.168.137.240:8000/data1/data1/average/");
+        const response = await fetch("http://192.168.43.59:8000/data1/data1/average/");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

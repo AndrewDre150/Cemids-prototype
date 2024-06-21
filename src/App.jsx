@@ -38,6 +38,7 @@ import Updates from "./components/Articles/Updates";
 import DashQuiz from "./components/Dashquiz/DashQuiz";
 import NewBot from './components/Chatbot/NewBot'
 import Report from "./components/Report/Report";
+import ForgotPasswrod from "./Forgot-password/forgotPasswrod";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -84,6 +85,7 @@ function App() {
           <Route path="/" element={<LandingPage/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/forgotpassword" element={<ForgotPasswrod />} />
           <Route path="/payment" element={<Payment />} />
           {/* <Route path="/testpayment" element={<Testpayment />} /> */}
           <Route path="/climatequiz" element={<ClimateChangeQuiz/>} />

@@ -43,7 +43,7 @@ const PricingSection = () => {
                 Earth Hour
                 </a>
               </div>
-              <h6 className="title">23rd March 2024</h6>
+              <h6 className="title">23rd June 2024</h6>
               <p>Earth Hour brings the world together in a moment of unity to shine a spotlight on the climate crisis and biodiversity loss. The United Nations is joining the global effort to mark the Biggest Hour for Earth. On 23 March at 8:30 p.m. local time, join WWF, the UN, and other partners in switching off your lights and giving an hour for Earth, 
                </p>
             </div>
@@ -64,7 +64,7 @@ const PricingSection = () => {
                 World Health Day
                 </a>
               </div>
-              <h6 className="title">7th April 2024</h6>
+              <h6 className="title">7th July 2024</h6>
               <p>Climate change is one of the greatest threats to human health, but the solutions are known. Reducing greenhouse gas emissions by phasing out fossil fuels and investing in sustainable transport, food and energy solutions will 
                 improve human health and save millions of lives. Learn more about climate change and health here.</p>
             </div>
@@ -85,7 +85,7 @@ const PricingSection = () => {
                  Day of Zero Waste
                 </a>
               </div>
-              <h6 className="title">05 May 2024</h6>
+              <h6 className="title">15th July 2024</h6>
               <p>Waste of all kinds contributes to the triple planetary crisis of climate change, biodiversity loss, and pollution. But options exist for living more sustainably. We can make choices that have less harmful effects on the environment.
                  On the International Day of Zero Waste, learn about what you can do to take action for the planet..</p>
             </div>

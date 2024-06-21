@@ -32,7 +32,8 @@ function Tempgraph() {
         //   maxHeight: "290px",
         //   resizeMode: "cover"  // Add resize mode for responsive design
         // }}
-        src="https://thingspeak.com/channels/2555342/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature+Monitoring&type=line"
+        // src="https://thingspeak.com/channels/2555342/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature+Monitoring&type=line"
+        src="https://thingspeak.com/channels/2555342/charts/2?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=60&title=Temperature+Monitoring&type=line"      
       ></iframe>
     </div>
   );
