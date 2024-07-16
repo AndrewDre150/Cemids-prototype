@@ -70,13 +70,22 @@ function App() {
     return () => unsubscribe();
   }, []);
 
+  // useEffect(() => {
+  //   const storedToken = localStorage.getItem('userToken');
+  //   if (storedToken && !user) {
+  //     // If there's a token in localStorage and no user is logged in, set the user state
+  //     setUser({ accessToken: storedToken });
+  //   }
+  // }, [user]);
+
   useEffect(() => {
     const storedToken = localStorage.getItem('userToken');
     if (storedToken && !user) {
       // If there's a token in localStorage and no user is logged in, set the user state
       setUser({ accessToken: storedToken });
     }
-  }, [user]);
+  }, []); // Empty dependency array to run this effect only once on component mount
+  
 
   return (
     <>

@@ -36,7 +36,7 @@ const Co2graph = () => {
         }}
         // src="https://thingspeak.com/channels/2555342/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"
         // src="https://thingspeak.com/channels/2555342/charts/1?bgcolor=%23ffffff&color=%23d62020&days=1&dynamic=true&results=60&type=line&xaxis=Timestamp"
-        src="https://thingspeak.com/channels/2555342/charts/1?bgcolor=%23ffffff&color=%23d62020&days=10&dynamic=true&results=60&type=line&xaxis=Timestamp"
+        src="https://thingspeak.com/channels/2555342/charts/1?bgcolor=%23ffffff&color=%23d62020&days=60&dynamic=true&results=60&timescale=daily&type=line&xaxis=Timestamp"
         title="ThingSpeak Chart"
       ></iframe>
       
