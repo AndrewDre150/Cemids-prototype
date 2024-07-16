@@ -181,7 +181,7 @@ const Charts = () => {
 
   useEffect(() => {
     // Fetch CO2 data from Django backend API
-    fetch('http://127.0.0.1:8000/data1/data1/assign-daywise/')
+    fetch('https://web-production-1423.up.railway.app/data1/data1/assign-daywise/')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
