@@ -148,7 +148,7 @@ const AreaBarChart = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://web-production-1423.up.railway.app/data1/assign-weekly-averages/');
+        const response = await fetch('https://web-production-1423.up.railway.app/data1/data1/assign-weekly-averages/');
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
