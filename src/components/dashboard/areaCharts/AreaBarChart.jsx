@@ -1,6 +1,8 @@
 
 
-// import { useContext } from "react";
+
+
+// import { useContext, useEffect, useState } from "react";
 // import {
 //   BarChart,
 //   Bar,
@@ -15,40 +17,27 @@
 // import { LIGHT_THEME } from "../../../constants/themeConstants";
 // import "./AreaCharts.scss";
 
-// const data = [
-//   {
-//     day: "Mon",
-//     Co2_level: 1000
-//   },
-//   {
-//     day: "Tue",
-//     Co2_level: 500
-//   },
-//   {
-//     day: "Wed",
-//     Co2_level: 800
-//   },
-//   {
-//     day: "Thur",
-//     Co2_level: 1200
-//   },
-//   {
-//     day: "Fri",
-//     Co2_level: 1400
-//   },
-//   {
-//     day: "Sat",
-//     Co2_level: 500
-//   },
-//   {
-//     day: "Sun",
-//     Co2_level: 300
-//   },
-  
-// ];
-
 // const AreaBarChart = () => {
 //   const { theme } = useContext(ThemeContext);
+//   const [co2Data, setCo2Data] = useState([]);
+
+//   useEffect(() => {
+//     // Fetch CO2 data from Django backend API
+//     fetch('https://web-production-1423.up.railway.app/data1/data1/assign-daywise2/')
+//       .then(response => {
+//         if (!response.ok) {
+//           throw new Error('Network response was not ok');
+//         }
+//         return response.json();
+//       })
+//       .then(data => {
+//         setCo2Data(data);  // Set the fetched data to state
+//       })
+//       .catch(error => {
+//         console.error('Error fetching CO2 data:', error);
+//         setError(error.message);  // Handle fetch errors
+//       });
+//   }, []);
 
 //   const formatTooltipValue = (value) => {
 //     return `${value}ppm`;
@@ -65,7 +54,7 @@
 //   return (
 //     <div className="bar-chart">
 //       <div className="bar-chart-info">
-//         <h2 className="bar-chart-title">Weekly Readings(ppm)</h2>
+//         <h2 className="bar-chart-title">Previous Week Readings (ppm)</h2>
 //         <div className="chart-info-data">
 //           <div className="info-data-value">800ppm</div>
 //           <div className="info-data-text">
@@ -79,7 +68,7 @@
 //           <BarChart
 //             width={500}
 //             height={200}
-//             data={data}
+//             data={co2Data}  // Use fetched CO2 data here
 //             margin={{
 //               top: 5,
 //               right: 5,
@@ -119,21 +108,13 @@
 //               formatter={formatLegendValue}
 //             />
 //             <Bar
-//               dataKey="Co2_level"
+//               dataKey="average_co2"
 //               fill="#475be8"
 //               activeBar={false}
 //               isAnimationActive={false}
 //               barSize={44}
 //               radius={[4, 4, 4, 4]}
 //             />
-//             {/* <Bar
-//               dataKey="loss"
-//               fill="#e3e7fc"
-//               activeBar={false}
-//               isAnimationActive={false}
-//               barSize={24}
-//               radius={[4, 4, 4, 4]}
-//             /> */}
 //           </BarChart>
 //         </ResponsiveContainer>
 //       </div>
@@ -142,8 +123,6 @@
 // };
 
 // export default AreaBarChart;
-
-
 
 
 import { useContext, useEffect, useState } from "react";
@@ -164,23 +143,26 @@ import "./AreaCharts.scss";
 const AreaBarChart = () => {
   const { theme } = useContext(ThemeContext);
   const [co2Data, setCo2Data] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch CO2 data from Django backend API
-    fetch('https://web-production-1423.up.railway.app/data1/data1/assign-daywise2/')
-      .then(response => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://web-production-1423.up.railway.app/data1/assign-weekly-averages/');
+
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.json();
-      })
-      .then(data => {
-        setCo2Data(data);  // Set the fetched data to state
-      })
-      .catch(error => {
+
+        const data = await response.json();
+        setCo2Data(data); // Set the fetched data to state
+      } catch (error) {
         console.error('Error fetching CO2 data:', error);
-        setError(error.message);  // Handle fetch errors
-      });
+        setError(error.message); // Handle fetch errors
+      }
+    };
+
+    fetchData();
   }, []);
 
   const formatTooltipValue = (value) => {
@@ -198,7 +180,7 @@ const AreaBarChart = () => {
   return (
     <div className="bar-chart">
       <div className="bar-chart-info">
-        <h2 className="bar-chart-title">Previous Week Readings (ppm)</h2>
+        <h2 className="bar-chart-title">Current Week Readings (ppm)</h2>
         <div className="chart-info-data">
           <div className="info-data-value">800ppm</div>
           <div className="info-data-text">
@@ -212,7 +194,7 @@ const AreaBarChart = () => {
           <BarChart
             width={500}
             height={200}
-            data={co2Data}  // Use fetched CO2 data here
+            data={co2Data} // Use fetched CO2 data here
             margin={{
               top: 5,
               right: 5,
@@ -262,6 +244,7 @@ const AreaBarChart = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
+      {error && <div className="error-message">{error}</div>}
     </div>
   );
 };
